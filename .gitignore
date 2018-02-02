@@ -1,0 +1,4 @@
+.vagrant
+.vscode
+node_modules/
+logs/
