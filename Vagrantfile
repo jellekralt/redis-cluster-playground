@@ -25,6 +25,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       
       if (i == 2) 
         redis.vm.provision :shell, :path => "provision/init_cluster.sh", :env => {"PORTS" => vm_ports, "HOSTS" => hosts}
+        # redis.vm.provision :shell, :path => "provision/start_redis_stat.sh"
       end
       
       redis.vm.provision :shell, :inline => "mkdir -p /vagrant/logs", :privileged => false
